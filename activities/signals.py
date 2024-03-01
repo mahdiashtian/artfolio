@@ -10,6 +10,8 @@ User = get_user_model()
 
 @receiver(post_save, sender=ArtActivity)
 def send_notification_to_user(sender, instance: ArtActivity, created: bool, **kwargs):
+    # Send notification to user when an activity is created
+
     if created:
         user: User = instance.user
         if user.phone_number:
