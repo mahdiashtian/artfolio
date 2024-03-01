@@ -3,6 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Idea file
+.idea/
+
+# Migration files
+*/migrations/*
+!*/migrations/__init__.py
+
 # C extensions
 *.so
 
